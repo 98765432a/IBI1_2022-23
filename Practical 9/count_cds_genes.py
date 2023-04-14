@@ -1,6 +1,5 @@
 import re
 f=open('/Users/wd/Downloads/Saccharomyces_cerevisiae.R64-1-1.cdna.all.fa')#open the file
-count=0#count the number of coding sequences which could be generated using the given stop codon
 endcode=input('please enter TAA/TAG/TGA:')#encode=the string we typ in
 output=f"{endcode}_stop_genes.fa"#put the input into the file name
 out=open(output,'w')#open the file TAA/TAG/TGA_stop_genes.fa and write in.
@@ -15,7 +14,8 @@ for line in f:#read the file line by line
                         line2=line.rstrip()#delete white space at the end of the line
                         sequence += line2#add those gene sequence in several lines together
                         if sequence.endswith(endcode):#extract the gene end with the encode we typed in
-                                count=count+1#count the number of gene end with 'encode'
+                                num_endcode=re.findall(endcode,sequence)
+                                count=len(num_endcode)#count the number of gene end with 'encode'
                                 gene=sequence+'\n'#line feed at the end of the gene
                                 num1=' '+str(count)+'\n'#compose type
                                 out.write(name+num1)#write the sequence name
