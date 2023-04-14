@@ -1,8 +1,7 @@
-seq ='ATGCAATCGACTACGATCTGAGAGGGCCTAA'#create a string variable seq
-#input three stop codons,and count them
-a=seq.count('TAG')
-b=seq.count('TGA')
-c=seq.count('TAA')
-d=a+b+c#count the number of stop codons in total
-print(d)#print the number of stop codons
-
+import re
+seq ='ATGCAATCGACTACGATCTGAGAGGGCCTAA'#import the sequence
+subseq=re.findall(r'ATG.+',seq)#extract the sequence start from ATG
+sub_seq=str(subseq)#change subseq into string
+a=re.findall(r'TGA|TAA|TAG',sub_seq)#find the number of TGA|TAA|TAG in sub_seq
+num=len(a)#count the number of stop codons
+print(num)
