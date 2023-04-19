@@ -1,5 +1,6 @@
 import re
-DNA=input('input a DNA sequence here:')#input DNA sequence
+DNA='GGgATgcccccctgaAAAT'#an example, which is supposed to be protein-coding
+#DNA=input('input a DNA sequence here:')#use this if we need to input DNA sequence
 coding=DNA.upper()#change the DNA sequence into upper class
 num_coding=len(coding)#calculate how many letters in the input DNA sequence
 extract=str(re.findall(r'ATG\S+TGA',coding))#extract the coding sequence and change the type into string
