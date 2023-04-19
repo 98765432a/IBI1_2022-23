@@ -1,5 +1,5 @@
 # What does this piece of code do?
-# Answer:print numbers randomly from 1 to 100.
+# Answer:the code generates numbers randomly from 1 to 100 for 10 times and print out the largest number among  this 10 numbers. 
 
 # Import libraries
 # randint allows drawing a random number,
