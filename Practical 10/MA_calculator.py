@@ -1,8 +1,9 @@
-#use function
-#print:whether buy a house in the UK
-
 class Coordinate (object):#import a class
 	def __init__(self,house,salary):#import a function
+		"""define house,salary
+		calculate how many times the price of house is higher than the annual salary
+		if the calculation is bigger than 5
+		then we can buy the house""" 
 		print('whether buy a house in the UK')
 		self.house=house
 		self.salary=salary

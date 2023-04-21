@@ -7,6 +7,10 @@ extract=str(re.findall(r'ATG(\S+)TGA',coding))#extract the coding sequence and c
 num_extract=len(extract)#calculate how many letters in the input DNA sequence
 class Coordinate(object):
 	def __init__(self,num_coding,num_extract):#Initialize function
+		"""input num_coding,num_extract
+		calculate the percentage of coding sequence
+		print the percentage
+		define the types of the DNA according to the percentage"""
 		print('the coding part of this DNA is:')
 		self.num_coding=num_coding
 		self.num_extract=num_extract
