@@ -10,15 +10,7 @@
 n=1#the generation of rabbits
 while 1==1:#to make a loop
         total=2**n #the total number of rabbits=2^n
-        n=n+1
+        n=n+1#add a generation
         if total>100:
                 print(n-1)
                 break
-
-
-n=1
-total=0
-for total<100:
-	n=n+1
-	total=2**n
-print(n)
