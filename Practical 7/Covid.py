@@ -74,7 +74,7 @@ plt.show()
 #the graph of How have new cases and total cases developed over time in China
 China_dates=covid_data.loc[covid_data["location"]=="China",'date']#extract date from "China" column
 China_new_cases=covid_data.loc[covid_data["location"]=="China",'new_cases']#extract China's new cases from covid_data
-China_total_cases=covid_data.loc[covid_data["location"]=="World",'total_cases']#extract China's total cases from covid_data
+China_total_cases=covid_data.loc[covid_data["location"]=="China",'total_cases']#extract China's total cases from covid_data
 plt.plot(China_dates,China_new_cases,'co')#plot the data of China_new_cases over time
 plt.plot(China_dates,China_total_cases,'b+')#plot the data of China_total_cases over time
 plt.xticks(China_dates.iloc[0:len(China_dates):4],rotation=-50)#define the tags in x axis
