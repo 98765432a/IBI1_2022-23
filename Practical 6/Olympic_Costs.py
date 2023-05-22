@@ -18,7 +18,7 @@ ind=np.arange(N)#the locations for the groups on the x axis
 width=0.7#the width between bars are 0.7 
 pl=plt.bar(ind,sortedcosts,width,edgecolor="r",color="gold")#plot a histogram and define its style
 plt.ylabel('costs')#the index of y axis
-plt.title('Olympic Costs',color="gold")#the style of its title
+plt.title('Olympic Costs',color="gold")#add a title and define the color of the title
 plt.xticks(ind,ordered_Olympic_Games,rotation=30)#define the style of indes in x axis 
 plt.yticks(np.arange(0,60,5))#the range of y axis is from 0 to 80,the space between each numbers on the Y axis is 5
 plt.show()#show the plot
