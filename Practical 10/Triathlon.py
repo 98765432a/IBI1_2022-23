@@ -8,7 +8,8 @@ class Triathlon (object):#import a class
 		self.swim=swim
 		self.cycle=cycle
 		self.run=run
+	def output(self):
 		total=self.swim+self.cycle+self.run#calculate the totol time cost of swim, cycle and run
-		print(self.name, self.location, self.swim, self.cycle, self.run, total)
-		
-c=Triathlon ('Chris·White','Edinburgh', 30, 10, 8)#input data as an example
+		return self.name, self.location, self.swim, self.cycle, self.run, total		
+c=Triathlon('Chris·White','Edinburgh', 30, 10, 8)#input data as an example
+print(c.output())
